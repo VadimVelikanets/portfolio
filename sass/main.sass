@@ -1,0 +1,759 @@
+@import "vars"
+@import "fonts"
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap')
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap')
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html
+  overflow-x: hidden
+
+body
+  font-size: $default-size
+  min-width: 320px
+  position: relative
+  line-height: 1.5
+  font-family: 'Open Sans', sans-serif
+  overflow-x: hidden
+  opacity: 1
+  color: $default-color
+  font-weight: 300
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  
+  select
+    background-color: #fff
+    outline: none
+    appearance: none
+
+  input, textarea, .mob-select
+    background-color: #fff
+    border: #666 1px solid
+    outline: none
+  textarea
+    resize: none
+  a
+    text-decoration: none
+
+
+    &:hover
+      color: none
+      text-decoration: none
+
+b, strong
+  font-weight: bold
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+li
+  list-style-type: none
+.icon
+  display: inline-block
+  vertical-align: middle
+  fill: #000
+  stroke: inherit
+  max-width: 18px
+  max-height: 18px
+ul li:before 
+    display: none
+
+.flex
+  display: flex
+  align-items: center
+  justify-content: center
+
+.column
+  display: flex
+  flex-direction: column
+
+.flex__start
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+
+.flex__between
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+.flex__around
+  display: flex
+  justify-content: space-around
+.end
+  display: flex
+  justify-content: end
+.flex__wrap
+  display: flex
+  flex-wrap: wrap
+.container
+  padding: $container-padding
+  margin: 0 auto
+  max-width: $max-width
+  width: 100%
+  height: 100%
+.bold
+  font-weight: bold
+
+
+
+.bg__cover
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+.bg__contain
+  background-position: center
+  background-repeat: no-repeat
+  background-size: contain
+
+//hamburger
+.my_hamburger
+  cursor: pointer
+  display: block
+  width: 24px
+  height: 24px
+  .hamburger_block
+    position: relative
+    height: 100%
+    .hamburger_top
+      top: 6px
+    .hamburger_bottom
+      top: 16px
+  .hamburger_top, .hamburger_bottom
+    position: absolute
+    transition: top .3s cubic-bezier(0.04, 0.04, 0.12, 1) .2999s,transform .1s cubic-bezier(0.04, 0.04, 0.12, 1)
+    width: 24px
+    height: 2px
+    background-color: #4A4A4A
+    border-radius: 2px
+  &.is-active
+    .hamburger_block
+      .hamburger_top, .hamburger_bottom
+        transition: top .3s cubic-bezier(0.04, 0.04, 0.12, 1),transform .1s cubic-bezier(0.04, 0.04, 0.12, 1) .29999s
+      .hamburger_top
+        top: 11px
+        transform: rotate(45deg)
+      .hamburger_bottom
+        top: 11px
+        transform: rotate(-45deg)
+
+.head__section
+  background-size: cover
+  background-repeat: no-repeat
+  h1
+    padding-top: 60px
+    font-size: 84px
+    line-height: 114px
+    font-weight: 300
+  .head__section__title
+    position: relative
+    .blue__line
+      position: absolute
+      margin-top: 13px
+      width: 94px
+      height: 4px
+      background: #188BFA
+      border-radius: 20px
+  .head__description
+    margin-top: 46px
+    margin-bottom: 24px
+    font-size: 20px
+    line-height: 33px  
+  ul li
+    padding-left: 0 
+  ul li a
+    font-size: 15px;
+    line-height: 20px;
+    color: #188BFA;
+    
+    padding-right: 37px
+  ul li:before 
+    display: none  
+  .head__section__info  
+    padding-top: 83px
+    padding-bottom: 51px
+    .head_info_img
+      text-align: center
+      min-width: 45px
+    .head_info_item
+      align-items: center
+      margin-bottom: 36px
+    #bitrix
+      padding-left: 12px
+    p 
+      font-weight: 300
+      font-size: 14px
+      line-height: 19px
+      padding-left: 26px
+      margin-top: 5px
+
+
+.h2
+  margin-top: 80px
+  margin-bottom: 20px
+  font-size: 36px
+  line-height: 49px
+  text-align: center
+  font-weight: 300
+
+.partner__form
+  min-width: 593px
+  font-size: 14px  
+  margin-left: 57px
+  input[type=text],   input[type=email],  textarea
+    padding: 13px 20px
+    background: #F5F5F5
+    border: 1px solid #E8E8E8
+    border-radius: 2px
+    color: #999999
+  input[type=text], input[type=email]
+    width: 288px
+    height: 49px
+    
+  input[type=text]::placeholder, input[type=email]::placeholder
+    color: #999999
+  input[type=checkbox]
+    width: 18px
+    height: 18px
+    border: 1px solid #E8E8E8
+    border-radius: 2px
+    background: #F5F5F5
+    position: relative
+  input[type=checkbox]:after
+    width: 20px
+    height: 20px
+    background: #fff
+    position: absolute
+    border: 1px black solid
+  textarea
+    width: 100%
+    height: 49px
+    resize: none
+    margin-bottom: 20px
+ 
+  .input_blocks
+    margin-bottom: 20px
+  .person__data
+    color: #188BFA
+  p
+    font-weight: 300
+    line-height: 140.84%
+    color: #999999
+.input__label
+  position: relative
+  label 
+    position: absolute
+    left: 20px
+    top: 16px
+    color: #999999 
+.btn__submit
+  width: 288px;
+  height: 49px;
+  background: #188BFA;
+  border-radius: 2px;
+  color: #fff
+  border: none
+  margin-left: 98px
+.logotypes
+  width: 48%
+  div 
+    height: 75px
+
+
+.custom__checkbox
+  position: relative
+  user-select: none
+  display: block
+  input
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+.checkmark 
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
+  border-radius: 2px;
+
+
+.checkmark:after 
+  content: ""
+  position: absolute
+  display: none
+.custom__checkbox input:checked ~ .checkmark:after 
+  display: block
+.custom__checkbox .checkmark:after 
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #000000;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+.partnership__wrapper
+  .gray
+    color: #999999;
+    margin: 25px 0 24px
+#portfolio_form
+  margin: 69px 17px 0
+.partnership__form 
+  width: 593px
+  font-size: 14px  
+  margin: 80px auto
+  input[type=text],   input[type=email],  textarea
+    padding: 13px 20px
+    background: #F5F5F5
+    border: 1px solid #E8E8E8
+    border-radius: 2px
+    color: #999999
+    margin-bottom: 20px
+  textarea
+    width: 100%
+    height: 49px
+  input[type=text], input[type=email]
+    width: 288px
+    height: 49px
+  .custom__checkbox
+    margin-right: 37px
+    margin-top: 11px
+  .checkbox_label
+    align-items: end
+    margin-top: 8px
+    p 
+      color: #999999;
+  .gray 
+    color: #999999;
+.download__btn
+  position: relative
+  margin-right: 45px
+  input[type=file]
+    opacity: 0
+    width: 150px
+    z-index: 999999;
+    position: absolute;
+    cursor: pointer
+  .download__btn__custom
+    position: absolute
+    top: 0
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #188BFA;
+    cursor: pointer
+    width: 150px
+    img 
+      margin-right: 16px
+
+/*Portfolio 2*/
+.section__company__wrapper  
+  margin-top: 80px
+  #company_h2
+    margin-top: 0
+    text-align: left
+  p
+    margin: 22px 0 25px
+    font-size: 14px
+.about__company
+  padding-left: 133px
+  img
+    margin-bottom: 20px
+  .line_txt
+    text-decoration-line: underline;
+    color: #000000;
+  a 
+    color: #188BFA;
+    font-size: 14px
+h3
+  margin: 0px 0 22px 
+  .h3                 
+    font-size: 24px;
+    line-height: 33px;
+    color: #2B2A29;
+    font-weight: bold
+
+.bg__wrapper
+  height: 787px;
+  margin-top: -21px;
+  position: relative;
+.portfolio_bg
+  width: 100vw;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 787px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 50vw);
+
+.take__files
+  margin-bottom: 14px;
+  margin-top: -6px;
+  align-items: baseline
+
+h4 
+  margin: 64px 0 49px
+  text-align: center
+  font-size: 16px;
+  line-height: 22px;
+  color: #2B2A29;
+  font-weight: 300
+.result
+  p 
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+
+.muz_img_block
+  margin: 56px 0 8px;
+  img 
+    margin: 0px 49px 93px;
+    width: 65px;
+    height: 65px;
+.hearphones__block
+  img
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+.hearphones__about
+  margin-left: 20px
+  p
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000; 
+    text-align: left
+#hearphones_card_img
+  margin-right: 20px
+.hearphones_img
+  margin-bottom: 45px
+  align-items: flex-end
+.hearphones_card
+  position: relative
+  margin-left: 20px
+  width: 233px;
+  height: 320px;
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 216px 16px 0
+  font-family: 'Roboto', sans-serif;
+  #hearphones_sm 
+    position: absolute;
+    top: -168px;
+    z-index: 9999;
+    right: -170px;
+    box-shadow: none;
+  #headphones_title
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
+  #headphones_name
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000
+    margin-bottom: 18px
+  #headphones_price_old
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration-line: line-through;
+    color: #E30613;
+  #headphones_price
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+.prices
+  margin-top: 16px
+
+.products__block_item
+  margin-right: 20px
+  p 
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+    color: #000000;
+    margin-top: 45px
+
+.form__txt
+  max-width: 586px;
+  p 
+    font-size: 14px;
+    line-height: 23px;
+    color: #000000;
+.form__wrapper
+  align-items: baseline
+  margin-bottom: 80px
+#gray_description
+  font-size: 12px;
+  line-height: 140.84%;
+  color: #999999;
+  text-align: left
+  margin-right: 20px
+#breef_link
+  text-decoration: underline
+  color: #007bff;
+#monitor
+  margin-left: 23px
+#big_hearphones
+  margin-bottom: 20px
+#file__about
+  max-width: 413px;
+#form_portfolio1
+  margin-top: 53px
+  .take__files 
+    margin-bottom: 4px;
+.breadcrumb 
+  a:hover 
+    color: #222;
+#file
+  font-size: 12px
+#file_wrap
+  width: 240px
+.hidden__list
+  display: none
+
+
+/* New styles*/
+.monitor__block
+  position: relative
+  width: 632px;
+  height: 494px;
+  .monitor__block__inner
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+  .monitor_screen
+    width: 93%;
+    position: absolute;
+    left: 3.5%;
+    height: auto
+    top: 4%;
+  .monitor__footer
+    position: absolute
+    bottom: -123px
+    left: 0
+    width: 100%
+
+.left__bg, .right__bg
+  position: absolute
+  bottom: 0
+  height: 100%
+  width: 33%
+  z-index: 1
+  img
+    position: absolute
+    bottom: 0
+    height: 85%
+    max-height: 550px
+    width: 100%
+.left__bg
+  left: 0
+.right__bg
+  right: 0
+  
+  
+.left_bg_shadow
+  position: absolute;
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.708333) 46.35%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+  width: 18%;
+  left: 0%;
+  height: 100%;
+  top: 0;
+.right_bg_shadow
+  position: absolute;
+  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0.708333) 46.35%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+  width: 18%;
+  right: 0%;
+  height: 100%;
+  top: 0;
+
+@keyframes lds-dual-ring 
+  0% 
+    transform: rotate(0deg);
+  
+  100% 
+    transform: rotate(360deg);
+  
+
+/*New  */
+.cases__portfolio1
+  min-height: 150px;
+  background-color: #F9F9F9;
+  .h2
+    text-align: left
+    font-size: 30px;
+    line-height: 41px;
+    color: #222222;
+    margin-top: 40px
+    margin-bottom: 10px
+  .bread__points
+    font-size: 13px;
+    line-height: 18px;
+    color: #9A9A9A;
+    span  
+      margin-right: 20px
+    a 
+      color: #9A9A9A;
+
+.about__project__block
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 30px #F5F5F5;
+  border-radius: 10px;
+  margin-top: 53px
+  padding: 40px 40px 10px
+  .about__task__item 
+    max-width: 320px
+    width: 100%
+    margin-left: 15px;
+  .about__task__item_img 
+    max-width: 420px
+    width: 100%
+    .task__item__img
+      width: 30%    
+      padding-bottom: 30px
+      text-align: center
+      p 
+        margin-top: 10px
+      .gray_txt
+        color: #C4C4C4;
+
+.bg__block
+  position: relative
+  margin: 110px auto 0
+  max-width: 2600px
+.bg__block__container
+  width: 1081.66px;
+  height: 730.43px;
+  margin: 0 auto
+  position: relative
+  .img_outer
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
+  .img_inner
+    width: 95%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    z-index: 2;
+  .mobile_hover
+    position: absolute;
+    bottom: 0
+    left: -10%;
+    width: 24%;
+    height: 68%
+    z-index: 2;
+    .mobile__inner
+      width: 100%;
+      height: auto;
+      bottom: 0;
+      position: absolute;
+    .mobile__outer
+      width: 86%;
+      height: auto
+      position: absolute;
+      left: 6%;
+      bottom: 4%;
+
+  .footer__hover
+    position: absolute
+    bottom: -12%
+    z-index: 3
+    width: 120%
+    left: -13%
+    height: auto
+.left__bg, .right__bg
+  position: absolute
+  bottom: 0
+  height: 100%
+  img
+    position: absolute
+    bottom: 0
+    height: 85%
+
+.catalog__wrapper
+  padding: 187px 0 100px
+  .catalog__item
+    width: calc(50% - 10px)
+    a 
+      height: 440px
+      width: calc(50% - 10px)
+  .catalog__img 
+    .bg_catalog
+      height: 440px
+      width: 100%
+.catalog__item__txt
+  margin-top: 20px
+  padding: 20px 40px 20px 20px
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  p 
+    margin-bottom: 0
+.bg_catalog
+  width: 100%
+  max-width: 1280px
+  height: 700px
+  border: 1px solid #EEEEEE;
+.catalog3_section, .catalog3_section_wrapper 
+  a
+    width: calc(50% - 10px)
+.catalog3_section_wrapper 
+  a
+    width: calc(50% - 10px) 
+.catalog3_section
+  padding: 100px 0 100px
+.catalog6_section_wrapper 
+  a
+    width: 100%
+.why_description
+  text-align: center
+
+.bg__example
+  background: #EEEEEE;
+.catalog4_section
+  padding: 100px 0 100px;
+  a 
+    width: calc(25% - 10px)
+    .bg_catalog
+      height: 440px
+.catalog6_section
+  padding: 100px 0 100px
+  .bg_catalog
+    height: 440px
+  
+.fancybox-thumbs__list
+  display: flex
+  flex-direction: column
+.foo 
+  display: none
+@import "media"
+// Always at the end
+
