@@ -144,7 +144,7 @@ ul li:before { display: none; }
 
 .input__label { position: relative; }
 
-.input__label label { position: absolute; left: 20px; top: 16px; color: #999999; }
+.input__label label { position: absolute; left: 20px; top: 13px; color: #999999; }
 
 .btn__submit { width: 288px; height: 49px; background: #188BFA; border-radius: 2px; color: #fff; border: none; margin-left: 98px; }
 
