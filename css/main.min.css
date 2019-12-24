@@ -286,17 +286,19 @@ h4 { margin: 64px 0 49px; text-align: center; font-size: 16px; line-height: 22px
 
 .monitor__block .monitor__block__inner { position: absolute; top: 0; left: 0; width: 100%; }
 
-.monitor__block .monitor_screen { width: 93%; position: absolute; left: 3.5%; height: auto; top: 4%; }
+.monitor__block .monitor_screen { width: 93%; position: absolute; left: 3.5%; top: 4%; }
 
 .monitor__block .monitor__footer { position: absolute; bottom: -123px; left: 0; width: 100%; }
 
 .left__bg, .right__bg { position: absolute; bottom: 0; height: 100%; width: 33%; z-index: 1; }
 
-.left__bg img, .right__bg img { position: absolute; bottom: 0; height: 85%; max-height: 550px; width: 100%; }
+.left__bg img, .right__bg img { position: absolute; bottom: 0; height: 100%; max-height: 550px; width: 100%; }
 
 .left__bg { left: 0; }
 
 .right__bg { right: 0; }
+
+.right__bg img { height: 72%; }
 
 .left_bg_shadow { position: absolute; background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), color-stop(46.35%, rgba(255, 255, 255, 0.708333)), to(rgba(255, 255, 255, 0))); background: -o-linear-gradient(left, #FFFFFF 0%, rgba(255, 255, 255, 0.708333) 46.35%, rgba(255, 255, 255, 0) 100%); background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.708333) 46.35%, rgba(255, 255, 255, 0) 100%); z-index: 2; width: 18%; left: 0%; height: 100%; top: 0; }
 
@@ -345,11 +347,7 @@ h4 { margin: 64px 0 49px; text-align: center; font-size: 16px; line-height: 22px
 
 .bg__block__container .mobile_hover .mobile__outer { width: 86%; height: auto; position: absolute; left: 6%; bottom: 4%; }
 
-.bg__block__container .footer__hover { position: absolute; bottom: -12%; z-index: 3; width: 120%; left: -13%; height: auto; }
-
-.left__bg, .right__bg { position: absolute; bottom: 0; height: 100%; }
-
-.left__bg img, .right__bg img { position: absolute; bottom: 0; height: 85%; }
+.bg__block__container .footer__hover { position: absolute; bottom: -5%; z-index: 3; width: 120%; left: -13%; height: auto; }
 
 .catalog__wrapper { padding: 187px 0 100px; }
 
@@ -363,7 +361,7 @@ h4 { margin: 64px 0 49px; text-align: center; font-size: 16px; line-height: 22px
 
 .catalog__item__txt p { margin-bottom: 0; }
 
-.bg_catalog { width: 100%; max-width: 1280px; height: 700px; border: 1px solid #EEEEEE; }
+.bg_catalog { width: 100%; max-width: 1296px; height: 700px; border: 1px solid #EEEEEE; }
 
 .catalog3_section a, .catalog3_section_wrapper a { width: -webkit-calc(50% - 10px); width: calc(50% - 10px); }
 
@@ -391,20 +389,23 @@ h4 { margin: 64px 0 49px; text-align: center; font-size: 16px; line-height: 22px
 
 .foo { display: none; }
 
+.gradient_wrapper { background: -webkit-gradient(linear, left bottom, left top, from(#FFFFFF), color-stop(3.34%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), color-stop(2.17%, rgba(255, 255, 255, 0))), #F5F5F5; background: -o-linear-gradient(bottom, #FFFFFF 0%, rgba(255, 255, 255, 0) 3.34%), -o-linear-gradient(top, #FFFFFF 0%, rgba(255, 255, 255, 0) 2.17%), #F5F5F5; background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 3.34%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 2.17%), #F5F5F5; }
+
 /*==========  Desktop First  ==========*/
 @media only screen and (max-width: 1600px) { /**/ }
 
 @media only screen and (max-width: 1366px) { /**/ }
 
-@media only screen and (max-width: 1280px) { /**/ }
+@media only screen and (max-width: 1250px) { .partnership__form { min-width: 593px; } }
 
 @media only screen and (max-width: 1200px) { .logotypes { width: 100%; }
   .stage__block_left .stage_img { position: relative; right: 0; } }
 
-@media only screen and (max-width: 1150px) { .bg__block__container { width: 85%; height: 600px; margin: 0 auto; position: relative; } }
+@media only screen and (max-width: 1150px) { .bg__block__container { width: 85%; height: 600px; margin: 0 auto; position: relative; }
+  .left__bg img, .right__bg img { height: 72%; } }
 
 @media only screen and (max-width: 992px) { /*New */
-  .section__company__wrapper, .about__project__block { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+  .section__company__wrapper, .about__project__block, .form__wrapper { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
   .section__company__wrapper .about__company { padding-top: 30px; padding-left: 0; }
   .about__project__block { padding: 20px; }
   .about__project__block .about__task__item { margin-left: 0px; }
@@ -419,7 +420,9 @@ h4 { margin: 64px 0 49px; text-align: center; font-size: 16px; line-height: 22px
   .catalog3_section a { width: 100%; }
   .catalog4_section .catalog3_section_wrapper { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .catalog4_section a { width: -webkit-calc(50% - 10px); width: calc(50% - 10px); margin-bottom: 30px; }
-  .catalog4_section a .bg_catalog { height: 440px; } }
+  .catalog4_section a .bg_catalog { height: 440px; }
+  .partnership__form { max-width: 593px; width: 100%; min-width: auto; }
+  .bg__block__container .footer__hover { bottom: -4%; } }
 
 @media only screen and (max-width: 840px) { .bg__block__container { height: 510px; } }
 
@@ -454,7 +457,6 @@ h4 { margin: 64px 0 49px; text-align: center; font-size: 16px; line-height: 22px
 
 @media only screen and (max-width: 540px) { .project__list_item .project__item__hover { padding: 15px; }
   .project__list_item .project__item__hover .hover__desktop { width: 70%; height: 60%; top: 17%; left: 14%; }
-  .project__list_item .project__item__hover .footer__hover { bottom: -11%; }
   .project__list_item .project__item__hover .hover__title { font-size: 16px; line-height: 23px; }
   .project__list_item .project__item__hover .hover_txt { font-size: 12px; line-height: 15px; }
   .monitor__block { height: 430px; } }
